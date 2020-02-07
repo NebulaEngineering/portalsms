@@ -26,7 +26,7 @@ exports.sendOneMessage = function(message, phoneNumbers){
             return;
         }
 
-        if(!phoneNumbers || phoneNumbers){
+        if(!phoneNumbers || phoneNumbers.length == 0){
             ConsoleLogger.e(`Missing or invalid parameters: phoneNumbers=>`, phoneNumbers);
             reject('Phone numbers have not been defined.');
             return;
